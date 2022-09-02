@@ -1,0 +1,358 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto-Regular'),
+    url('../fonts/Roboto-Regular.woff2') format('woff2'),
+    url('../fonts/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto-Bold'),
+    url('../fonts/Roboto-Bold.woff2') format('woff2'),
+    url('../fonts/Roboto-Bold.woff') format('woff');
+}
+
+:root {
+  --blue: #3f2aff;
+  --white: #fff;
+  --darkgrey: #212133;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1290px;
+}
+
+.header {
+  background-color: var(--blue);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+
+.burger {
+  display: none;
+}
+
+.header__nav__close {
+  display: none;
+}
+
+.header__nav__list {
+  display: flex;
+}
+
+.header__nav__item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--white);
+}
+
+.header__nav__item:not(:last-child) {
+  margin-right: 56px;
+}
+
+.hero {
+  background-image: url('../img/hero.png'), radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+  background-position: top 15px right 165px, 00;
+  background-repeat: no-repeat;
+}
+
+.hero__container {
+  padding: 130px 0;
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 27px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  color: var(--white);
+}
+
+.hero__descr {
+  margin: 0;
+  margin-bottom: 62px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--white);
+}
+
+.hero__btn {
+  padding: 24px 75px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 20px;
+}
+
+.advantages {
+  padding: 78px 0 73px;
+  background-color: var(--white);
+}
+
+.advantages__top {
+  margin-bottom: 18px;
+  padding-left: 190px;
+  background-image: url('../img/Vectary\ texture.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 17px;
+  max-width: 380px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: #2e2b44;
+}
+
+.advantages__descr {
+  margin: 0;
+  max-width: 585px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #666;
+}
+
+.advantages__block {
+  padding: 18px 0 18px 110px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: #666;
+  background-position: left center;
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+}
+
+.advantages__block__first {
+  background-image: url('../img/eye-circle.svg');
+}
+
+.advantages__block__second {
+  background-image: url('../img/fingers.svg');
+}
+
+.advantages__block__third {
+  background-image: url('../img/loud-circle.svg');
+}
+
+.tutors {
+  padding: 75px 0 74px;
+  background-color: var(--darkgrey);
+}
+
+.justify-space-between {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.tutors__title {
+  margin: 0;
+  margin-bottom: 23px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: var(--white);
+}
+
+.tutors__card__photo {
+  margin-bottom: 26px;
+}
+
+.tutors__card__name {
+  margin: 0;
+  margin-bottom: 7px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--white);
+}
+
+.tutors__card__descr {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #85859b;
+}
+
+
+.courses {
+  padding: 74px 0 80px;
+  background-color: var(--white);
+}
+
+.courses__title {
+  margin: 0;
+  margin-bottom: 23px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: var(--darkgrey);
+}
+
+.courses__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 210px 30px 30px 30px;
+  min-height: 480px;
+  background-color: #edf0f9;
+  border-radius: 20px;
+  height: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.courses__card__time {
+  position: absolute;
+  top: 14px;
+  right: 5px;
+  padding-left: 25px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--white);
+  background-image: url('../img/mdi_access_time.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+.courses__card__first {
+  background-image: url('../img/courses1.jpg');
+}
+
+.courses__card__second {
+  background-image: url('../img/courses2.jpg');
+}
+
+.courses__card__third {
+  background-image: url('../img/courses3.jpg');
+}
+
+.courses__card__fourth {
+  background-image: url('../img/courses4.jpg');
+}
+
+.courses__list:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.courses__card__title {
+  margin: 0;
+  margin-bottom: 7px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--darkgrey);
+}
+
+.courses__card__descr {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #666;
+}
+
+.courses__card__btn {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 20px 59px;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 20px;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px 0;
+  background-color: #2e2b44;
+}
+
+.footer__social:not(:last-child) {
+  margin-right: 34px;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.reg {
+  color: var(--blue);
+}
+
+.footer__info {
+  margin: 0;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #2e2b44;
+}
